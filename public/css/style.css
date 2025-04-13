@@ -2,8 +2,8 @@
   display: grid;
   grid-template-columns: repeat(8, minmax(0, 1fr));
   grid-template-rows: repeat(8, minmax(0, 1fr));
-  width: 400px;
-  height: 400px;
+  width: 600px;
+  height: 600px;
   transform: rotate(0deg);
 }
 
@@ -42,12 +42,19 @@
 .piece.draggable {
   cursor: grab;
 }
+.piece.draggable:active {
+  cursor: grabbing;
+}
+
 
 .dragging {
   opacity: 0.5;
 }
 
 /* Rotate pieces for black player */
+.flipped {
+  transform: rotate(180deg);
+}
 .flipped .piece {
   transform: rotate(180deg);
 }
